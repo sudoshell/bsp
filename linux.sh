@@ -39,13 +39,13 @@ BL='\e[34m'
 echo 'Downloading Burp Suite Professional ....'
 sudo mkdir -p /usr/share/burpsuite
 cd /usr/share/burpsuite/
-Link="https://github.com/sudoshell/bsp/raw/master/loader.jar"
-sudo wget "$Link" -O loader.jar --quiet --show-progress
+Link="https://github.com/sudoshell/bsp/raw/main/loader.jar"
+sudo wget -c "$Link" -O loader.jar --quiet --show-progress
 html=$(curl -s https://portswigger.net/burp/releases)
 version=$(echo $html | grep -Po '(?<=/burp/releases/professional-community-)[0-9]+\-[0-9]+\-[0-9]+' | head -n 1)
 Link="https://portswigger-cdn.net/burp/releases/download?product=pro&version=&type=jar"
 echo $version
-wget "$Link" -O burpsuite_pro.jar --quiet --show-progress
+wget -c "$Link" -O burpsuite_pro.jar --quiet --show-progress
 sleep 2
 # Execute Burp Suite Professional with Keyloader
 echo 'Executing Burp Suite Professional with Keyloader'
