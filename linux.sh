@@ -4,7 +4,7 @@ GR='\e[32m'
 NL='\e[0m'
 WH='\e[97m'
 BL='\e[34m'
-
+GH="https://github.com/sudoshell/bsp/raw/main"
 # # Check if Java JDK 19 is installed
 # if ! command -v javac >/dev/null 2>&1; then
 #     echo "Java JDK 19 is not installed, installing"
@@ -39,7 +39,7 @@ BL='\e[34m'
 echo 'Downloading Burp Suite Professional ....'
 sudo mkdir -p /usr/share/burpsuite
 cd /usr/share/burpsuite/
-Link="https://github.com/sudoshell/bsp/raw/main/loader.jar"
+Link="$GH/loader.jar"
 sudo wget -c "$Link" -O loader.jar --quiet --show-progress
 html=$(curl -s https://portswigger.net/burp/releases)
 version=$(echo $html | grep -Po '(?<=/burp/releases/professional-community-)[0-9]+\-[0-9]+\-[0-9]+' | head -n 1)
@@ -56,4 +56,4 @@ echo 'Starting Keygenerator'
 java -jar loader.jar
 echo 'Creating Desktop Entries'
 cd /usr/share/applications/
-sudo wget "https://github.com/sudoshell/bsp/raw/master/burp.desktop" -O burp-professional.desktop --quiet --show-progress
+sudo wget "$GH/burp.desktop" -O burp-professional.desktop --quiet --show-progress
