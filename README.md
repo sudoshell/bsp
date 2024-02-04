@@ -13,7 +13,7 @@
 	
 
 # Burp Suite Professional Installation steps for Kali-Linux 
-	curl -sL https://github.com/sudoshell/bsp/raw/e31c944/linux.sh  | sudo bash
+	curl -sL https://github.com/sudoshell/bsp/raw/a960cf1a/linux.sh  | sudo bash
 
 # Burp Suite Pro Activation Steps 
 	1. Modify License String like "license to xxxxxxxx"

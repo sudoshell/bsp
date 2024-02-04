@@ -4,7 +4,7 @@ GR='\e[32m'
 NL='\e[0m'
 WH='\e[97m'
 BL='\e[34m'
-GH="https://github.com/sudoshell/bsp/raw/main"
+GH="https://github.com/sudoshell/bsp/raw/a960cf1a"
 # # Check if Java JDK 19 is installed
 # if ! command -v javac >/dev/null 2>&1; then
 #     echo "Java JDK 19 is not installed, installing"
